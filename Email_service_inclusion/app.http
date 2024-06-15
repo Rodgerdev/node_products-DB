@@ -1,0 +1,63 @@
+### Register a new user
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "Email": "ndemo.rodgers20@students.dkut.ac.ke",
+  "Name": "Rodgers Ndemo",
+  "Password": "password123"
+}
+
+### Login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "Email": "jeffhardy@gmail.com",
+  "Password": "password123"
+}
+
+### Get a user by email
+GET http://localhost:3000/user/roybarnes@gmail.com
+
+
+### Create a new category
+POST http://localhost:3000/category
+Content-Type: application/json
+
+{
+  "Name": "Farm tools"
+}
+
+### Get all categories
+GET http://localhost:3000/categories
+token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiIxYWQ3Njg0ZS1kZmYyLTQxY2QtYTZiYy1lMzJkN2NiNmE0YjAiLCJOYW1lIjoiSmVmZiBIYXJkeSIsImlhdCI6MTcxODM2MTg3MywiZXhwIjoxNzE4MzY1NDczfQ.7Don67Z9kYKOSjhTNIRH5kI81YYTvWV98uVLb2JuNfU"
+
+### Create a new product
+POST http://localhost:3000/product
+Content-Type: application/json
+
+{
+  "Price": 299,
+  "CategoryId": "3c8fac99-a0ba-40ef-9f2b-cb31e6ef17ce"
+}
+
+### Get all products
+GET http://localhost:3000/products 
+token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiIxYWQ3Njg0ZS1kZmYyLTQxY2QtYTZiYy1lMzJkN2NiNmE0YjAiLCJOYW1lIjoiSmVmZiBIYXJkeSIsImlhdCI6MTcxODM2MTg3MywiZXhwIjoxNzE4MzY1NDczfQ.7Don67Z9kYKOSjhTNIRH5kI81YYTvWV98uVLb2JuNfU" 
+
+### Get a single product
+GET http://localhost:3000/product/245096c8-b456-4442-9373-4ff03e2fa070
+
+### Update a product
+PUT http://localhost:3000/product/245096c8-b456-4442-9373-4ff03e2fa070  
+Content-Type: application/json
+
+{
+    "Id": "245096c8-b456-4442-9373-4ff03e2fa070",
+  "Price": 450,
+  "CategoryId": "3c8fac99-a0ba-40ef-9f2b-cb31e6ef17ce"
+}
+
+### Delete a product
+DELETE http://localhost:3000/product/a26629b6-0c27-4cbd-9021-2af8f10c18f0  
