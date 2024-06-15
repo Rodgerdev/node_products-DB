@@ -1,0 +1,8 @@
+USE Items
+GO
+CREATE OR ALTER PROCEDURE getProduct
+    @Id VARCHAR(255)
+AS
+BEGIN
+    SELECT * FROM Product WHERE Id = @Id;
+END
